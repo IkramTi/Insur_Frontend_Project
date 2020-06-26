@@ -6,10 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Card from 'components/Card';
 import CardBody from 'components/CardBody';
 
-import VehicleIdentification from './VehicleIdentification';
-import VehicleInfo from './VehicleInfo';
-import Packs from './Packs';
-import Installments from './Installments';
+import VehicleInfo from '../VehicleInfo';
+import Packs from '../Packs';
+import Installments from '../Installments';
 import services from 'services';
 import useLifecycleMethods from 'helpers/useLifecycleMethods.helpers';
 
@@ -241,18 +240,13 @@ const Simulation = ({ handleSubmit, ...props }) => {
 					className="rounded-0"
 				>
 					<CardBody>
-						<Grid container spacing={2}>
-							<Grid item xs={12} sm={12} md={12} lg={6}>
-								<VehicleIdentification brands={brands && brands} models={models} />
-							</Grid>
-							<Grid item xs={12} sm={12} md={12} lg={6}>
-								<VehicleInfo
-									categories={categories}
-									types={types}
-									motorCapacite={motorCapacite}
-								/>
-							</Grid>
-						</Grid>
+						<VehicleInfo
+							brands={brands && brands}
+							models={models}
+							categories={categories}
+							types={types}
+							motorCapacite={motorCapacite}
+						/>
 					</CardBody>
 				</Card>
 			</form>
