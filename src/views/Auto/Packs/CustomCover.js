@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
-import { reduxForm, formValueSelector } from 'redux-form';
+import { useDispatch } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -19,7 +18,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 import CoverCard from 'components/Covers/CoverCard';
-import Installments from './Installments';
+import Installments from '../Installments';
 import services from 'services';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
